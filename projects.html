@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Chala Worku Portfolio</title>
+  <meta name="description" content="Featured projects by Chala Worku, including web applications, interfaces, and Java solutions." />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <canvas id="trail-canvas"></canvas>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Chala<span>Worku</span></a>
+      <nav class="nav" id="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="admin.html" class="nav-link nav-admin">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn mode-toggle" id="theme-toggle" aria-label="Toggle dark mode">☾</button>
+        <button class="btn btn-menu" id="menu-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container projects-page">
+    <section class="section-header fade-up">
+      <span class="section-label">Projects</span>
+      <h1>Featured Work</h1>
+      <p>Interactive web experiences, campus projects, and Java solutions built with modern development best practices.</p>
+    </section>
+
+    <section class="project-filter fade-up delay-1">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+      <button class="filter-btn" data-filter="ui">UI/UX</button>
+    </section>
+
+    <section class="project-grid" id="project-grid"></section>
+  </main>
+
+  <div class="modal" id="project-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modal-close" aria-label="Close project preview">×</button>
+      <div class="modal-content">
+        <img src="assets/images/project-placeholder.svg" alt="Project preview" id="modal-image" loading="lazy" />
+        <div class="modal-body">
+          <h3 id="modal-title">Project Title</h3>
+          <p id="modal-description">Project description will appear here.</p>
+          <div class="modal-tags" id="modal-tags"></div>
+          <div class="modal-actions">
+            <a href="#" target="_blank" id="modal-demo" class="btn btn-secondary">Live Demo</a>
+            <a href="#" target="_blank" id="modal-github" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo">Chala<span>Worku</span></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <p>© 2026 Chala Worku. All rights reserved.</p>
+        <div class="visitor-counter" id="visitor-counter-container" style="display: none;">
+          <span class="visitor-counter-dot"></span>
+          <span>Visits: <strong id="visitor-count">0</strong></span>
+        </div>
+      </div>
+      <a href="index.html#home" class="back-to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/projects.js"></script>
+
+  <!-- Floating Music Widget -->
+  <div class="music-widget">
+    <button class="music-btn" id="music-btn" aria-label="Toggle background music">▶</button>
+    <div class="music-waves" id="music-waves">
+      <div class="music-wave"></div>
+      <div class="music-wave"></div>
+      <div class="music-wave"></div>
+      <div class="music-wave"></div>
+    </div>
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <div class="chatbot-widget">
+    <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open AI Assistant">💬</button>
+    <div class="chatbot-window" id="chatbot-window">
+      <div class="chatbot-header">
+        <div>
+          <h3>Chala's AI Assistant</h3>
+          <span>Online • Intelligent Helper</span>
+        </div>
+        <button class="chatbot-close" id="chatbot-close" aria-label="Close Chat">×</button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="chat-message bot">
+          Hi! I am Chala's AI Assistant. Ask me anything about his skills, education, or projects!
+        </div>
+      </div>
+      <div class="chatbot-suggestions">
+        <button class="suggestion-chip">What skills do you have?</button>
+        <button class="suggestion-chip">Tell me about your university.</button>
+        <button class="suggestion-chip">What projects have you done?</button>
+      </div>
+      <form class="chatbot-input-container" id="chatbot-form" onsubmit="return false;">
+        <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Type a message..." required autocomplete="off" />
+        <button type="submit" class="chatbot-send" id="chatbot-send" aria-label="Send message">➔</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

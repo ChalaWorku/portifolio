@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Chala Worku Portfolio</title>
+  <meta name="description" content="Admin dashboard for managing projects, contact messages, and Firebase resources." />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <canvas id="trail-canvas"></canvas>
+  <header class="site-header admin-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Chala<span>Worku</span></a>
+      <button class="btn mode-toggle" id="theme-toggle" aria-label="Toggle dark mode">☾</button>
+    </div>
+  </header>
+
+  <main class="container admin-page">
+    <section class="admin-panel glass-card fade-up">
+      <div id="auth-section">
+        <h1>Admin Login</h1>
+        <p>Securely sign in to manage portfolio content and review messages.</p>
+        <form id="login-form" class="admin-form" novalidate>
+          <div class="form-group">
+            <label for="admin-email">Email</label>
+            <input type="email" id="admin-email" required placeholder="admin@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" required placeholder="••••••••" />
+          </div>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+          <p class="form-feedback" id="admin-feedback"></p>
+        </form>
+      </div>
+
+      <div id="dashboard-section" class="hidden">
+        <div class="dashboard-header">
+          <h1>Portfolio Admin</h1>
+          <button class="btn btn-secondary" id="logout-button">Logout</button>
+        </div>
+        <div class="dashboard-stats">
+          <div class="stat-card glass-card">
+            <h3 id="stat-projects">0</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat-card glass-card">
+            <h3 id="stat-messages">0</h3>
+            <p>Messages</p>
+          </div>
+          <div class="stat-card glass-card">
+            <h3 id="stat-testimonials">0</h3>
+            <p>Testimonials</p>
+          </div>
+        </div>
+
+        <div class="admin-content-grid">
+          <section class="admin-card glass-card">
+            <h2>Manage Projects</h2>
+            <form id="project-form" class="admin-form" novalidate>
+              <div class="form-group">
+                <label for="project-title">Title</label>
+                <input id="project-title" required placeholder="Project title" />
+              </div>
+              <div class="form-group">
+                <label for="project-description">Description</label>
+                <textarea id="project-description" rows="3" required placeholder="Short project description"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="project-tech">Technologies</label>
+                <input id="project-tech" required placeholder="HTML, CSS, JavaScript" />
+              </div>
+              <div class="form-group">
+                <label for="project-image">Image URL</label>
+                <input id="project-image" placeholder="https://example.com/image.png" />
+              </div>
+              <div class="form-group">
+                <label for="project-demo">Live demo URL</label>
+                <input id="project-demo" placeholder="https://live-demo.example.com" />
+              </div>
+              <div class="form-group">
+                <label for="project-github">GitHub URL</label>
+                <input id="project-github" placeholder="https://github.com/username/repo" />
+              </div>
+              <button type="submit" class="btn btn-primary">Save Project</button>
+              <p class="form-feedback" id="project-feedback"></p>
+            </form>
+          </section>
+
+          <section class="admin-card glass-card">
+            <h2>Project Library</h2>
+            <div id="projects-list" class="message-list"></div>
+          </section>
+
+          <section class="admin-card glass-card">
+            <h2>Messages</h2>
+            <div id="messages-list" class="message-list"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

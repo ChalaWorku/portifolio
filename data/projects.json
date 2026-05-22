@@ -1,0 +1,22 @@
+[
+  {
+    "id": "project-1",
+    "title": "Portfolio Landing Page",
+    "description": "Responsive portfolio layout built with HTML, CSS, and JavaScript featuring glassmorphism and animations.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "categories": ["web", "ui"],
+    "image": "assets/images/project-placeholder.svg",
+    "github": "#",
+    "demo": "#"
+  },
+  {
+    "id": "project-2",
+    "title": "University App Prototype",
+    "description": "A Java application prototype for managing academic resources and student workflow.",
+    "technologies": ["Java", "OOP"],
+    "categories": ["java"],
+    "image": "assets/images/project-placeholder.svg",
+    "github": "#",
+    "demo": "#"
+  }
+]

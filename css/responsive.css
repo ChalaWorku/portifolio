@@ -1,0 +1,65 @@
+@media (max-width: 720px) {
+  .hero-section {
+    padding-top: 60px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-preview {
+    min-height: auto;
+  }
+
+  .hero-copy,
+  .hero-preview,
+  .about-bio,
+  .about-details,
+  .contact-card,
+  .contact-form,
+  .admin-card,
+  .modal-body {
+    padding: 24px;
+  }
+
+  .section-header {
+    margin-top: 80px;
+  }
+
+  .skill-card,
+  .feature-card,
+  .mini-card,
+  .timeline-item,
+  .strength-card,
+  .project-card,
+  .testimonial-card,
+  .stat-card {
+    min-height: auto;
+  }
+
+  .project-grid,
+  .feature-grid,
+  .hero-stats,
+  .map-frame,
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    margin-left: auto;
+  }
+
+  .nav-link {
+    width: 100%;
+  }
+}

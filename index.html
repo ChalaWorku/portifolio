@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chala Worku | Computer Science Student</title>
+  <meta name="description" content="Professional portfolio of Chala Worku, Computer Science student at Oda Bultum University. Explore projects, skills, resume, testimonials, and contact information." />
+  <meta name="keywords" content="Chala Worku, portfolio, computer science student, web developer, Java developer, UI/UX designer" />
+  <meta property="og:title" content="Chala Worku | Personal Portfolio" />
+  <meta property="og:description" content="Explore the modern portfolio of Chala Worku, Computer Science student with skills in HTML, CSS, JavaScript, C++, and Advanced Java." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/c2.jpg" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <canvas id="trail-canvas"></canvas>
+  <div class="page-loader" id="page-loader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Chala<span>Worku</span></a>
+      <nav class="nav" id="navbar">
+        <a href="index.html#home" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="admin.html" class="nav-link nav-admin">Admin</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn mode-toggle" id="theme-toggle" aria-label="Toggle dark mode">☾</button>
+        <button class="btn btn-menu" id="menu-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="home">
+      <div class="hero-bg">
+        <div class="particle" style="--x:10;--y:20;"></div>
+        <div class="particle" style="--x:75;--y:15;"></div>
+        <div class="particle" style="--x:40;--y:80;"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-copy glass-card fade-up">
+          <span class="eyebrow">Hello, I am</span>
+          <h1>Chala Worku</h1>
+          <p class="role">Computer Science Student at Oda Bultum University</p>
+          <div class="typing-text" id="typewriter"></div>
+          <p class="hero-text">I build modern web experiences with premium UI, clean code, and thoughtful interactions. My focus is on responsive design, accessible interfaces, and performance-first solutions.</p>
+          <div class="hero-actions">
+            <a href="assets/data/CV-Chala-Worku.pdf" class="btn btn-primary" download="Chala-Worku-CV.pdf">Download CV</a>
+            <a href="contact.html" class="btn btn-secondary">Hire Me</a>
+          </div>
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" aria-label="Twitter" class="social-icon">T</a>
+            <a href="#" aria-label="LinkedIn" class="social-icon">in</a>
+            <a href="#" aria-label="GitHub" class="social-icon">GH</a>
+          </div>
+        </div>
+        <div class="hero-preview glass-card fade-right">
+          <div class="hero-image">
+            <img src="assets/images/c2.jpg" alt="Portrait of Chala Worku" loading="lazy" />
+          </div>
+          <div class="hero-stats">
+            <div>
+              <span>12+</span>
+              <p>Projects</p>
+            </div>
+            <div>
+              <span>5</span>
+              <p>Skills</p>
+            </div>
+            <div>
+              <span>3</span>
+              <p>Certificates</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview-section container fade-up">
+      <div class="mini-card">
+        <h3>University</h3>
+        <p>Oda Bultum University</p>
+      </div>
+      <div class="mini-card">
+        <h3>Degree</h3>
+        <p>Bachelor Degree in Computer Science</p>
+      </div>
+      <div class="mini-card">
+        <h3>Specialty</h3>
+        <p>Web Development & Java Applications</p>
+      </div>
+    </section>
+
+    <section class="features-section container" id="services">
+      <div class="section-header fade-up">
+        <span class="section-label">Services</span>
+        <h2>What I Offer</h2>
+      </div>
+      <div class="grid-3 fade-up delay-1">
+        <article class="feature-card glass-card">
+          <h3>Frontend Development</h3>
+          <p>Responsive websites with HTML, CSS, and JavaScript optimized for performance and accessibility.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <h3>Web Design</h3>
+          <p>Modern visual systems, clean spacing, and smooth motion for premium user experiences.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <h3>UI/UX Design</h3>
+          <p>Interactive layouts, intuitive navigation, and polished interfaces designed to delight users.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <h3>Java Programming</h3>
+          <p>Strong Java fundamentals for algorithms, object-oriented design, and academic projects.</p>
+        </article>
+        <article class="feature-card glass-card">
+          <h3>Problem Solving</h3>
+          <p>Analytical thinking, debugging skills, and structured solutions for complex technical challenges.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonial-section container fade-up" id="testimonials">
+      <div class="section-header">
+        <span class="section-label">Testimonials</span>
+        <h2>Client & Mentor Feedback</h2>
+      </div>
+      <div class="testimonial-slider" id="testimonial-slider">
+        <article class="testimonial-card glass-card">
+          <p>"Chala delivers excellent code and design with strong attention to detail. Their ability to translate concepts into a polished site is impressive."</p>
+          <h4>Professor Adane</h4>
+          <span>Computer Science Lecturer</span>
+        </article>
+        <article class="testimonial-card glass-card">
+          <p>"A dependable collaborator with a clean workflow and proactive communication. The project was delivered on time with excellent quality."</p>
+          <h4>Fikirte T.</h4>
+          <span>Project Mentor</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="logo">Chala<span>Worku</span></a>
+        <p>Premium portfolio design for academic and professional growth.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <div style="display: flex; flex-direction: column; align-items: flex-start;">
+        <p>© 2026 Chala Worku. All rights reserved.</p>
+        <div class="visitor-counter" id="visitor-counter-container" style="display: none;">
+          <span class="visitor-counter-dot"></span>
+          <span>Visits: <strong id="visitor-count">0</strong></span>
+        </div>
+      </div>
+      <a href="#home" class="back-to-top">Back to top</a>
+    </div>
+  </footer>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/projects.js"></script>
+
+  <!-- Floating Music Widget -->
+  <div class="music-widget">
+    <button class="music-btn" id="music-btn" aria-label="Toggle background music">▶</button>
+    <div class="music-waves" id="music-waves">
+      <div class="music-wave"></div>
+      <div class="music-wave"></div>
+      <div class="music-wave"></div>
+      <div class="music-wave"></div>
+    </div>
+  </div>
+
+  <!-- AI Chatbot Floating Widget -->
+  <div class="chatbot-widget">
+    <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open AI Assistant">💬</button>
+    <div class="chatbot-window" id="chatbot-window">
+      <div class="chatbot-header">
+        <div>
+          <h3>Chala's AI Assistant</h3>
+          <span>Online • Intelligent Helper</span>
+        </div>
+        <button class="chatbot-close" id="chatbot-close" aria-label="Close Chat">×</button>
+      </div>
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="chat-message bot">
+          Hi! I am Chala's AI Assistant. Ask me anything about his skills, education, or projects!
+        </div>
+      </div>
+      <div class="chatbot-suggestions">
+        <button class="suggestion-chip">What skills do you have?</button>
+        <button class="suggestion-chip">Tell me about your university.</button>
+        <button class="suggestion-chip">What projects have you done?</button>
+      </div>
+      <form class="chatbot-input-container" id="chatbot-form" onsubmit="return false;">
+        <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Type a message..." required autocomplete="off" />
+        <button type="submit" class="chatbot-send" id="chatbot-send" aria-label="Send message">➔</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
